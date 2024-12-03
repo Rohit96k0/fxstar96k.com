@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First webpage</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-outline: 0;
+	font-family Roboto, sans-serif, arial;
+}
+html, body 
+	{
+	font-size: 14px;
+	font-weight: 400;
+	background: #000000;
+	color: #fff;
+}
+.container {
+	width: 1100px;
+	margin: 0px auto;
+	display: table;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+}
+
+
+
+
+/*****MENU SECTION*****/
+.main-panel {
+	width: 100%;
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	height: 100vh;
+}
+
+.logo {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.span-col {
+	color: #ffbf35;
+}
+
+nav {
+	float: right;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 20px;
+	color: white;
+}
+
+
+
+/*****Main BANNER*****/
+.width-50 {
+	float: left;
+	width: 50%;
+}
+.banner-section {
+	width: 100%;
+	float: left;
+	margin-top: 25vh;
+}
+.banner-section h1 {
+	font-size: 48px;
+	margin-top: 10px;
+	font-weight: bolder;
+}
+.banner-section h2 {
+	font-size: 20px;
+	line-height: 25px;
+	margin-top: 10px;
+	font-weight: 400;
+}
+.banner-section a {
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: 20px;
+	border-radius: 50%;
+	text-align: center;
+	border: 2px solid #ffbf35;
+	color: #ffbf35;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+}
+/*****Main BANNER IMAGE*****/
+.main-panel img {
+	margin-top: 10%;
+	width: 100%;
+	margin-left: 10%;
+}
+
+
+
+/*ABOUT US SECTION*/
+.main-section {
+	width: 100%;
+	float: left;
+	padding: 110px 0px 110px 0px;
+}
+.width-100 {
+	width: 100%;
+	float: left;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.heading-text {
+	width: 100%;
+	float: left;
+	font-size: 35px;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #ffbf35;
+}
+.about-img {
+	width: 100%;
+	padding: 0px 50px;
+	margin-top: 20px;
+}
+.about-us {
+	width: 100%;
+	float: left;
+	padding: 20px;
+}
+.about-us p {
+	font-size: 16px;
+	margin-top: 15px;
+	line-height: 27px;
+}
+table {
+	width: 100%;
+}
+table th,
+table td {
+	font-size: 16px;
+	text-align: left;
+	padding: 5px 0px;
+}
+
+
+
+
+/*****SKILL SECTION*****/
+.skill {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+.skill span {
+	float: right;
+}
+
+.skill div {
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+	background: #e7e7e7;
+	border-radius: 10px;
+}
+
+.skill div span {
+	background: #ffbf35;
+	height: 5px;
+	float: left;
+}
+
+div[role="progressbar"] {
+	color: #ffbf35;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 100px;
+	;
+	height: 100px;
+	;
+	border-radius: 50%;
+
+	place-items: center;
+	display: grid;
+
+	--pgPercentage: var(--value);
+	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+		conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
+
+}
+
+
+
+
+/*****EXPERIENCE SECTION*****/
+.bg-lightgrey {
+	background-color: #1a1a1a;
+}
+.edu-exp {
+	padding: 10px 0px;
+	width: 48%;
+	margin: 1%;
+	float: left;
+	padding-left: 10px;
+}
+.experience-list {
+	width: 100%;
+	float: left;
+	padding: 30px 10px;
+	background: #262626;
+	margin-bottom: 20px;
+}
+.experience-content {
+	width: 100%;
+	float: left;
+	margin-left: 10px;
+}
+.experience-content h2 {
+
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.experience-content h3 {
+	color: #ffbf35;
+	font-weight: 500;
+	margin-bottom: 2px;
+	font-size: 17px;
+}
+.experience-content p {
+	font-size: 15px;
+}
+
+
+
+
+/*SERVICE SECTION*/
+.service-list {
+	padding: 40px;
+	margin-top: 35px;
+	background: #262626;
+	border-radius: 15px;
+	width: 94%;
+	float: left;
+}
+
+.service-list i {
+	font-size: 50px;
+	color: #ffbf35;
+	width: 70px;
+	float: left;
+}
+
+.service-list h3 {
+	font-size: 28px;
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+
+.service-list p {
+	font-size: 15px;
+	line-height: 25px;
+}
+
+
+
+/*****TESTIMONIAL SECTION*****/
+.testimonial {
+	width: 32%;
+	float: left;
+	margin-right: 1%;
+	margin-top: 50px;
+}
+
+.testimonial-content {
+	background: #262626;
+	color: #cfcfcf;
+	width: 100%;
+	float: left;
+	padding: 0px 20px 20px 20px;
+	font-size: 16px;
+	line-height: 28px;
+	position: relative;
+	text-align: center
+}
+
+.testimonial i {
+	color: #ffbf35;
+	font-size: 35px;
+	margin-top: 60px;
+}
+
+.testimonial-img {
+	width: 100%;
+	float: left;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top: -35px;
+}
+
+.testimonial-img img {
+	width: 80px;
+	height: 80px;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+
+.testimonial-name {
+	width: 100%;
+	float: left;
+}
+
+.testimonial-name h5 {
+	color: #ffbf35;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.testimonial-name p {
+	font-size: 16px;
+}
+
+
+
+/*PORTFOLIO SECTION*/
+.gallery {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+}
+.gallery img {
+	height: auto;
+	width: 95%;
+	margin-bottom: 20px;
+}
+
+
+
+
+/*CONTACT US SECTION*/
+.contact form {
+	width: 66%;
+	margin: 0px auto;
+}
+.contact input,
+textarea {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #a1a1a1;
+}
+.contact textarea {
+	height: 80px;
+}
+.contact button {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	background: #ffbf35;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.contact h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 60px;
+	color: #ffbf35;
+}
+.contact h4 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+.contact p {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+
+
+/*****FOOTER SECTION*****/
+.footer {
+	background-color: #202020;
+	padding: 30px 0px 40px 0px;
+	width: 100%;
+	float: left;
+}
+.footer-sect {
+	color: #b3b3b3;
+}
+.footer-sect a {
+	color: #b3b3b3;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+}
+.social-icon a i {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #cdcdcd;
+	line-height: 50px;
+	font-size: 20px;
+	border-radius: 50%;
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+
+</style>
+</head>
+<body>
+
+
+<!-----MENU SECTION------>
+<div class="main-panel">
+  <div class="container">
+    <div class="width-33 logo">Rohit<span class="span-col">2005</span>
+    </div>
+    <div class="width-66">
+      <nav>
+        <a href="#">
+          <span class="span-col">Home</span>
+        </a>
+        <a href="#">About me</a>
+        <a href="#">Education</a>
+        <a href="#">My Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Testimonial</a>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!------MAIN BANNERR------>
+<div class="container ">
+  <div class="width-50">
+    <div class="banner-section">
+      <span class="span-col">Welcome To www.fxstar2005.com web page</span>
+      <h1>FxStar<span class="span-col">2005</span>
+      </h1>
+      <h2>-  Hi !! I'm Rohit</h2>
+      <a href="https://www.facebook.com/">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://www.twittercom/">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="https://web.telegram.org/">
+        <i class="fa fa-telegram"></i>
+      </a>
+      <a href="https://www.youtube.com/">
+        <i class="fa fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+  <div class="width-50">
+    <img src="—Pngtree—gamer boy mascot logo_5905992.png">
+  </div>
+</div>
+</div>
+
+
+
+<!------ABOUT US SECTION------>
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <div class="width-50">
+      <img src="—Pngtree—gamer boy mascot logo_5905992.png" class="about-img">
+    </div>
+    <div class="width-50">
+      <div class="about-us">
+        <h2 class="heading-text">About Us</h2>
+        <h3>I am available for web Design Project</h3>
+        <p>Hi, I am Rohit Kurkute, From India. B.Sc.IT student And Mumbai University in 2023.</p>
+        <div class="width-50 mt-20">
+          <table cellspacing="8" cellpadding="8">
+            <tr>
+              <th>Name:</th>
+              <td>Rohit Kurkute</td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td>rohitkurkute2005@gmail.com</td>
+            </tr>
+            <tr>
+              <th>Birthday:</th>
+              <td> 15 Nov, 2005</td>
+            </tr>
+            <tr>
+              <th>Study:</th>
+              <td> Mumbai University</td>
+            </tr>
+          </table>
+        </div>
+        <div class="width-50 mt-20">
+          <table cellspacing="8" cellpadding="8">
+            <tr>
+              <th>Phone:</th>
+              <td> +91 XXXX XXXX</td>
+            </tr>
+            <tr>
+              <th>City:</th>
+              <td>Mumbai , India</td>
+            </tr>
+            <tr>
+              <th>Gender:</th>
+              <td> Male</td>
+            </tr>
+            <tr>
+              <th>Website:</th>
+              <td> www.fxstar2005.com</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!------SKILL SECTION------>
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Results</h2>
+    <div class="width-50">
+      <div class="skill">
+        <b>10th</b>
+        <span>65.40%</span>
+        <div>
+          <span style="width:65.40%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>11th</b>
+        <span>39.30%</span>
+        <div>
+          <span style="width:39.30%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>12th</b>
+        <span>56.45</span>
+        <div>
+          <span style="width:56.45%"></span>
+        </div>
+      </div>
+      <div class="skill">
+        <b>FYIT sem-1</b>
+        <span>67.47%</span>
+        <div>
+          <span style="width:67.47%"></span>
+        </div>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">10th-65.40%</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="--value:39">11th-39.30%</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="--value:56">12th-56.45%</div>
+      </div>
+      <div class="width-50">
+        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value:67">FIT-67.47%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!------EXPERIENCE SECTION------>
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <div class="edu-exp">
+      <h2 class="heading-text">Education</h2>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>------------ </h2>
+          <h3>---------</h3>
+          <p>-------------------------</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>-------------</h2>
+          <h3>----------</h3>
+          <p>------------------------</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>----------------</h2>
+          <h3>---------</h3>
+          <p>------------------------</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>--------------------</h2>
+          <h3>---------</h3>
+          <p>------------------------------</p>
+        </div>
+      </div>
+    </div>
+    <div class="edu-exp">
+      <h2 class="heading-text">Experience</h2>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>----------------------------</h2>
+          <h3>-----------</h3>
+          <p>----------------------------</p>
+      </div>
+	  </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>--------------------------</h2>
+          <h3>-----------</h3>
+          <p>-----------------------------------</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>---------------------------</h2>
+          <h3>------------</h3>
+          <p>----------------------</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        <div class="experience-content">
+          <h2>------------------------</h2>
+          <h3>----------</h3>
+          <p>--------------------</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------SERVICE SECTION------>
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Service</h2>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-chrome"></i>
+        <h3>Web Design</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing portfolio student website</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-instagram"></i>
+        <h3>Creative Design</h3>
+        <p>Lorem ipsum dolor sit amet, student graphic design portfolio websites euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-reddit"></i>
+        <h3>Animation</h3>
+        <p>Lorem ipsum dolor sit amet, student portfolio website examples nonummy nibh euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-video-camera"></i>
+        <h3>Video Editing</h3>
+        <p>student portfolio website, consectetuer adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-camera"></i>
+        <h3>Photo Editing</h3>
+        <p>portfolio website examples for students adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+    <div class="width-50">
+      <div class="service-list">
+        <i class="fa fa-google"></i>
+        <h3>Login Page Design</h3>
+        <p>digital portfolio websites for students adipiscing elitsed nonummy nibh euismod</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!------TESTIMONIAL SECTION------>
+<div class="main-section bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">What Client Say's </h2>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="64aa17d64b3784e5317f040b673220c0.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p>  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+        <div class="testimonial-name">
+          <h5>Doraemon</h5>
+          <p>Data base</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="2ba2ba6b5d19564a63b7aea5ae68bdc0.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ </p>
+        <div class="testimonial-name">
+          <h5>Sincha</h5>
+          <p>Data Analysis</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-img">
+          <img src="ca8ade9acdf1115e9364fd30abd41754.jpg">
+        </div>
+        <i class="fa fa-quote-left"></i>
+        <p> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ </p>
+        <div class="testimonial-name">
+          <h5>Oggy</h5>
+          <p>Data Science</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!------PORTFOLIO SECTION------>
+<div class="main-section">
+  <div class="container">
+    <h2 class="heading-text">My Portfolio</h2>
+    <div class="gallery">
+      <div class="width-33">
+        <img src="2023-day-3-ai-art-lets-fix-this-v0-wpe23r79l84c1.webp">
+      </div>
+      <div class="width-33">
+        <img src="ai-robot-typing-v0-a0hws95wwn0b1.webp">
+      </div>
+      <div class="width-33">
+        <img src="ai-generated-8403412_640.webp">
+      </div>
+      <div class="width-33">
+        <img src="9740865119ba19e79e_0.jpg">
+      </div>
+      <div class="width-33">
+        <img src="pngtree-cute-3d-holiday-cartoon-character-hacker-is-using-a-laptop-png-image_10542298.png">
+      </div>
+      <div class="width-33">
+        <img src="ai-generated-7895959_640.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-------------CONTACT US SECTION----------------------->
+<div class="main-section contact bg-lightgrey">
+  <div class="container">
+    <h2 class="heading-text">Get In Touch</h2>
+    <div class="width-100">
+      <form>
+        <input type="text" placeholder="Full Name...">
+        <input type="email" placeholder="Full Email Id...">
+        <input type="text" placeholder="Full Mobile No...">
+        <textarea placeholder="Enter Address..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-map-marker"></i>
+      </h3>
+      <h4>Address</h4>
+      <p>A wing Room no.503 ------------------------- Dahisar (E),Mumbai</p>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-phone"></i>
+      </h3>
+      <h4>Phone</h4>
+      <p>+91 XXXX XXXX</p>
+    </div>
+    <div class="width-33">
+      <h3>
+        <i class="fa fa-youtube"></i>
+      </h3>
+      <h4>YT channel</h4>
+      <p><a href="http://www.youtube.com/@Offical_Rohit_2005" style="color:green"><b><h4>Join Now</h4></b></a></p>
+    </div>
+  </div>
+</div>
+
+
+
+<!------FOOTER SECTION------>
+<div class="footer">
+  <div class="container">
+    <div class="footer-sect social-icon width-50">
+      <a href="https://www.facebook.com/">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    <div class="footer-sect mt-20 width-50">CopyRight © 2024<u><i><a href="copy.html"style="color:yellow">fxstsr.com</a></u></i> Website Template. All Rights Reserved</div>
+  </div>
+</div>
+</body>
+</html>
