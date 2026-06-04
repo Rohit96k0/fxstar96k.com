@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FxStar 96k | Rohit Kurkute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* SKILLS SECTION ANIMATIONS */
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .skill-tag {
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1.05rem;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1;
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-tag i {
+      font-size: 1.2rem;
+    }
+
+    .skill-tag::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: currentColor;
+      transition: all 0.4s ease;
+      z-index: -1;
+      opacity: 0.15;
+    }
+
+    .skill-tag:hover::before {
+      width: 100%;
+      opacity: 0.25;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-8px) scale(1.08) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px currentColor;
+    }
+
+    .tag-cyan {
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      background: rgba(0, 229, 255, 0.08);
+    }
+
+    .tag-purple {
+      color: #aa00ff;
+      border: 1px solid rgba(170, 0, 255, 0.3);
+      background: rgba(170, 0, 255, 0.08);
+    }
+
+    .tag-gold {
+      color: #ffbf35;
+      border: 1px solid rgba(255, 191, 53, 0.3);
+      background: rgba(255, 191, 53, 0.08);
+    }
+
+    @keyframes floatSkill {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .skill-tag.float-1 {
+      animation: floatSkill 3.5s ease-in-out infinite;
+    }
+
+    .skill-tag.float-2 {
+      animation: floatSkill 3s ease-in-out infinite 0.5s;
+    }
+
+    .skill-tag.float-3 {
+      animation: floatSkill 4s ease-in-out infinite 1s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Global Animated Background -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="global-grid-bg"></div>
+  <div class="global-bg-orb orb-1"></div>
+  <div class="global-bg-orb orb-2"></div>
+  <div class="global-bg-orb orb-3"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">Fx<span>Star</span> <span class="logo-96">96k</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-line"></span>
+          Welcome to my universe
+        </div>
+        <h1 class="hero-name">
+          <span class="line1">FxStar</span>
+          <span class="line2">96k</span>
+        </h1>
+        <p class="hero-sub">Hi, I'm <strong>Rohit Kurkute</strong></p>
+        <div class="hero-typewriter">
+          I'm a <span class="typed-text"></span><span class="cursor">|</span>
+        </div>
+        <div class="hero-social">
+          <a href="https://www.facebook.com/profile.php?id=100080018457516" target="_blank" aria-label="Facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/RohitKurkute96k" target="_blank" aria-label="X"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/_roh.it45" target="_blank" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/rohit-kurkute-b09280371" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@FxRohit96k" target="_blank" aria-label="YouTube"><i
+              class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a href="#contact" class="hero-cta">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="glow-orb"></div>
+        <img src="—pngtree—gamer boy mascot logo_5905992.png" alt="FxStar 96k" class="hero-img">
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-dot"></span>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">Who I Am</p>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-img-border"></div>
+          <img src="pngtree-cute-3d-holiday-cartoon-character-hacker-is-using-a-laptop-png-image_10542298.png"
+            alt="Rohit Kurkute" class="about-photo">
+          <div class="about-badge">
+            <span class="badge-num">Fx</span>
+            <span class="badge-label">Star96k</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal" style="transition-delay:0.15s">
+          <h3>I'm available for Web Design Projects</h3>
+          <p>Hi, I am <strong>Rohit Kurkute</strong>, a passionate B.Sc. IT student at Mumbai University (2023–26),
+            based in Mumbai, India. I specialize in web design, creative design, animation, and digital media. I love
+            building things that live on the internet and look futuristic.</p>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-user info-icon"></i>
+              <div>
+                <span class="info-label">Name</span>
+                <span class="info-val">Rohit Kurkute</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-envelope info-icon"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-val">rohitkurkute2005@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-cake-candles info-icon"></i>
+              <div>
+                <span class="info-label">Birthday</span>
+                <span class="info-val">15 Nov, 2005</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-graduation-cap info-icon"></i>
+              <div>
+                <span class="info-label">University</span>
+                <span class="info-val">Mumbai University</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-phone info-icon"></i>
+              <div>
+                <span class="info-label">Phone</span>
+                <span class="info-val">+91 8956237446</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot info-icon"></i>
+              <div>
+                <span class="info-label">City</span>
+                <span class="info-val">Dahisar East, Mumbai, Maharashtra 400068, India</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-venus-mars info-icon"></i>
+              <div>
+                <span class="info-label">Gender</span>
+                <span class="info-val">Male</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-globe info-icon"></i>
+              <div>
+                <span class="info-label">Website</span>
+                <span class="info-val">fxstar96k.netlify.app</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="results" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">Academic Performance</p>
+        <h2 class="section-title">My <span class="accent">Results</span></h2>
+      </div>
+
+      <div class="results-layout">
+        <!-- Skill Bars -->
+        <div class="skill-bar-list reveal">
+          <div class="skill-item" data-pct="85">
+            <div class="skill-meta">
+              <span class="skill-name">Basic Web Design</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--target:85%"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-pct="75">
+            <div class="skill-meta">
+              <span class="skill-name">Digital Video Editing</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill purple" style="--target:75%"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-pct="90">
+            <div class="skill-meta">
+              <span class="skill-name">Digital Photo Editing</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill gold" style="--target:90%"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-pct="95">
+            <div class="skill-meta">
+              <span class="skill-name">Digital Poster Designing</span>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--target:95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Circular Progress Rings -->
+        <div class="circles-grid reveal" style="transition-delay:0.2s">
+          <div class="circle-wrap">
+            <svg class="circle-svg" width="120" height="120" viewBox="0 0 120 120">
+              <circle class="circle-bg" cx="60" cy="60" r="50" />
+              <circle class="circle-ring cyan-ring" cx="60" cy="60" r="50" data-val="85" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+              <text x="60" y="64" class="circle-text">85%</text>
+            </svg>
+            <span class="circle-label">Basic web design</span>
+          </div>
+          <div class="circle-wrap">
+            <svg class="circle-svg" width="120" height="120" viewBox="0 0 120 120">
+              <circle class="circle-bg" cx="60" cy="60" r="50" />
+              <circle class="circle-ring purple-ring" cx="60" cy="60" r="50" data-val="75" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+              <text x="60" y="64" class="circle-text">75%</text>
+            </svg>
+            <span class="circle-label">Digital video editing</span>
+          </div>
+          <div class="circle-wrap">
+            <svg class="circle-svg" width="120" height="120" viewBox="0 0 120 120">
+              <circle class="circle-bg" cx="60" cy="60" r="50" />
+              <circle class="circle-ring gold-ring" cx="60" cy="60" r="50" data-val="90" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+              <text x="60" y="64" class="circle-text">90%</text>
+            </svg>
+            <span class="circle-label">Digital photo editing</span>
+          </div>
+          <div class="circle-wrap">
+            <svg class="circle-svg" width="120" height="120" viewBox="0 0 120 120">
+              <circle class="circle-bg" cx="60" cy="60" r="50" />
+              <circle class="circle-ring cyan-ring" cx="60" cy="60" r="50" data-val="95" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+              <text x="60" y="64" class="circle-text">95%</text>
+            </svg>
+            <span class="circle-label">Digital poster designing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & EXPERIENCE ============ -->
+  <section id="education" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">My Journey</p>
+        <h2 class="section-title">Education &amp; <span class="accent">Experience</span></h2>
+      </div>
+
+      <div class="edu-exp-grid">
+        <!-- Education Timeline -->
+        <div>
+          <p class="timeline-col-title"><i class="fa-solid fa-book-open"></i> Education</p>
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="tl-dot"></div>
+              <div class="timeline-card">
+                <h3>B.Sc. Information Technology</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2023 – 2026</span>
+                <p>Mumbai University — Currently pursuing undergraduate degree in IT with a focus on web development and
+                  data systems.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.1s">
+              <div class="tl-dot"></div>
+              <div class="timeline-card">
+                <h3>12th Grade (HSC)</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2022 – 2023</span>
+                <p>Completed Higher Secondary Certificate examination with 56.33% marks, Maharashtra State Board.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.2s">
+              <div class="tl-dot"></div>
+              <div class="timeline-card">
+                <h3>11th Grade</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2021 – 2022</span>
+                <p>Completed 11th grade with 39.30% marks. Built foundational knowledge in science and mathematics.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.3s">
+              <div class="tl-dot"></div>
+              <div class="timeline-card">
+                <h3>10th Grade (SSC)</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2020 – 2021</span>
+                <p>Secondary School Certificate with 65.40% marks. Developed early interest in computers and design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div>
+          <p class="timeline-col-title"><i class="fa-solid fa-briefcase"></i> Experience</p>
+          <div class="timeline timeline-purple">
+            <div class="timeline-item reveal" style="transition-delay:0.05s">
+              <div class="tl-dot tl-dot-purple"></div>
+              <div class="timeline-card">
+                <h3>Web Designer &amp; Developer</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2024 – Present</span>
+                <p>Building portfolio sites, landing pages, and web applications. Specializing in futuristic UI/UX
+                  design.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.15s">
+              <div class="tl-dot tl-dot-purple"></div>
+              <div class="timeline-card">
+                <h3>Content Creator</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2024 – Present</span>
+                <p>YouTube content creation at @Offical_Rohit_2005. Producing video edits, digital art, and tech
+                  content.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.25s">
+              <div class="tl-dot tl-dot-purple"></div>
+              <div class="timeline-card">
+                <h3>Graphic &amp; Motion Designer</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2023 – Present</span>
+                <p>Creating logos, mascots, digital illustrations, and motion graphics for personal and freelance
+                  projects.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal" style="transition-delay:0.35s">
+              <div class="tl-dot tl-dot-purple"></div>
+              <div class="timeline-card">
+                <h3>Photo &amp; Video Editor</h3>
+                <span class="period"><i class="fa-regular fa-calendar"></i> 2023 – Present</span>
+                <p>Expert in post-production editing, color grading, and special effects for photos and videos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">What I Offer</p>
+        <h2 class="section-title">My <span class="accent">Services</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <i class="fa-solid fa-globe service-icon"></i>
+          <h3>Basic Web Designer</h3>
+          <p>Crafting modern, responsive, and user-friendly web interfaces with clean code and visually appealing
+            designs.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <span class="service-num">02</span>
+          <i class="fa-solid fa-film service-icon"></i>
+          <h3>Digital Video Editor</h3>
+          <p>Professional video production including seamless transitions, color grading, special effects, and cinematic
+            editing.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <span class="service-num">03</span>
+          <i class="fa-solid fa-camera service-icon"></i>
+          <h3>Digital Photo Editor</h3>
+          <p>Advanced photo retouching, creative manipulation, and professional compositing to make images look
+            stunning.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.05s">
+          <span class="service-num">04</span>
+          <i class="fa-solid fa-video service-icon"></i>
+          <h3>Content Creator</h3>
+          <p>Producing engaging, high-quality digital content for YouTube, social media, and various digital platforms.
+          </p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.15s">
+          <span class="service-num">05</span>
+          <i class="fa-solid fa-pen-nib service-icon"></i>
+          <h3>Digital Poster Designing</h3>
+          <p>Designing striking digital posters, flyers, and creative graphic layouts for events, promotions, and
+            brands.</p>
+          <div class="card-glow"></div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.25s">
+          <span class="service-num">06</span>
+          <i class="fa-solid fa-laptop-code service-icon"></i>
+          <h3>IT Student</h3>
+          <p>Passionate BSc IT student learning and applying programming, data analysis, and software development
+            skills.</p>
+          <div class="card-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">Feedback</p>
+        <h2 class="section-title">What Clients <span class="accent">Say</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="t-avatar">
+            <img src="64aa17d64b3784e5317f040b673220c0.jpg" alt="Doraemon">
+          </div>
+          <i class="fa-solid fa-quote-left t-quote"></i>
+          <p>Working with Rohit was an incredible experience. His attention to design detail and ability to bring
+            futuristic concepts to life exceeded all expectations. Highly recommended!</p>
+          <div class="t-name">Doraemon</div>
+          <div class="t-role">Database Specialist</div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.12s">
+          <div class="t-avatar">
+            <img src="2ba2ba6b5d19564a63b7aea5ae68bdc0.jpg" alt="Sincha">
+          </div>
+          <i class="fa-solid fa-quote-left t-quote"></i>
+          <p>Rohit's creative vision is truly unique. He delivered a stunning web design that perfectly captured our
+            brand identity with smooth animations and vibrant colors.</p>
+          <div class="t-name">Sincha</div>
+          <div class="t-role">Data Analyst</div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.24s">
+          <div class="t-avatar">
+            <img src="ca8ade9acdf1115e9364fd30abd41754.jpg" alt="Oggy">
+          </div>
+          <i class="fa-solid fa-quote-left t-quote"></i>
+          <p>The video editing and photo work Rohit produced was professional-grade. His eye for composition and color
+            makes every project look cinematic and polished.</p>
+          <div class="t-name">Oggy</div>
+          <div class="t-role">Data Scientist</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">What I Know</p>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-container reveal" style="text-align: center;">
+        <p class="skills-desc" style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 25px; opacity: 0.8;">
+          Computer knowledge and expertise in various programming languages, tools, and digital editing software.</p>
+        <div class="skills-tags">
+          <span class="skill-tag tag-cyan float-1"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="skill-tag tag-cyan float-2"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="skill-tag tag-cyan float-3"><i class="fa-brands fa-java"></i> Java</span>
+          <span class="skill-tag tag-cyan float-1"><i class="fa-solid fa-code"></i> C++ & C#</span>
+          <span class="skill-tag tag-cyan float-2"><i class="fa-brands fa-html5"></i> HTML/CSS & SQL</span>
+          <span class="skill-tag tag-cyan float-3"><i class="fa-brands fa-github"></i> GitHub & VS Code</span>
+          <span class="skill-tag tag-purple float-1"><i class="fa-solid fa-chart-pie"></i> Power BI & Data
+            Analysis</span>
+          <span class="skill-tag tag-purple float-2"><i class="fa-solid fa-brain"></i> Artificial Intelligence</span>
+          <span class="skill-tag tag-purple float-3"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+          <span class="skill-tag tag-gold float-1"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</span>
+          <span class="skill-tag tag-gold float-2"><i class="fa-solid fa-film"></i> Digital Video Editing</span>
+          <span class="skill-tag tag-gold float-3"><i class="fa-solid fa-image"></i> Digital Photo Editing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section id="portfolio" class="section section-dark">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="section-tag">My Work</p>
+        <h2 class="section-title">My <span class="accent">Portfolio</span></h2>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            alt="Basic Web Designer">
+          <div class="portfolio-overlay">
+            <div class="p-label">Web Design</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+        <div class="portfolio-item reveal" style="transition-delay:0.08s">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+            alt="Digital Video Editor">
+          <div class="portfolio-overlay">
+            <div class="p-label">Video Editing</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+        <div class="portfolio-item reveal" style="transition-delay:0.16s">
+          <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&w=800&q=80"
+            alt="Digital Photo Editor">
+          <div class="portfolio-overlay">
+            <div class="p-label">Photo Editing</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+        <div class="portfolio-item reveal" style="transition-delay:0.06s">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+            alt="Digital Poster Designing">
+          <div class="portfolio-overlay">
+            <div class="p-label">Poster Design</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+        <div class="portfolio-item reveal" style="transition-delay:0.14s">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
+            alt="Artificial Intelligence">
+          <div class="portfolio-overlay">
+            <div class="p-label">Artificial Intelligence</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+        <div class="portfolio-item reveal" style="transition-delay:0.22s">
+          <img src="—pngtree—gamer boy mascot logo_5905992.png" alt="Content Creator">
+          <div class="portfolio-overlay">
+            <div class="p-label">Content Creator</div>
+          </div>
+          <div class="p-border"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section-alt">
+    <div class="section-inner" style="position:relative; z-index:2;">
+      <div class="section-header reveal">
+        <p class="section-tag">Let's Connect</p>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form-wrap reveal">
+          <form id="contactForm" class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="contactName" placeholder=" " required>
+                <label for="contactName">Full Name</label>
+                <span class="form-line"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="contactEmail" placeholder=" " required>
+                <label for="contactEmail">Email Address</label>
+                <span class="form-line"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="contactPhone" placeholder=" ">
+              <label for="contactPhone">Phone Number</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="contactMessage" placeholder=" " rows="5"></textarea>
+              <label for="contactMessage">Your Message...</label>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="contact-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fa-solid fa-paper-plane btn-icon"></i>
+              <div class="btn-shine"></div>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info reveal" style="transition-delay:0.15s">
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="ci-text">
+              <h4>Address</h4>
+              <p>Dahisar East, Mumbai, Maharashtra 400068, India</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="ci-text">
+              <h4>Phone</h4>
+              <p>+91 8956237446</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-brands fa-youtube"></i></div>
+            <div class="ci-text">
+              <h4>YouTube Channel</h4>
+              <a href="https://www.youtube.com/@FxRohit96k" target="_blank">FxRohit96k</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="ci-text">
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/_roh.it45" target="_blank">_roh.it45</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="ci-text">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/rohit-kurkute-b09280371"
+                target="_blank">linkedin.com/in/rohit-kurkute-b09280371</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="ci-text">
+              <h4>Email</h4>
+              <a href="mailto:rohitkurkute2005@gmail.com">rohitkurkute2005@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Fx<span>Star</span> <span class="logo-96">96k</span></div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/_roh.it45" target="_blank" aria-label="Instagram"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rohit-kurkute-b09280371" target="_blank" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@FxRohit96k" target="_blank" aria-label="YouTube"><i
+            class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2024 <a href="copy.html">fxstar.com</a> — All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-check-circle"></i>
+    <span>Information securely saved in database!</span>
+  </div>
+
+  <script>
+    /* ── PARTICLE CANVAS ── */
+    (function () {
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let animFrame;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function Particle() {
+        this.reset();
+      }
+      Particle.prototype.reset = function () {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.r = Math.random() * 1.5 + 0.3;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.7 + 0.1;
+        const colors = ['#00e5ff', '#aa00ff', '#ffbf35', '#ffffff'];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      };
+      Particle.prototype.update = function () {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      };
+      Particle.prototype.draw = function () {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 6;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      };
+
+      function initParticles(n) {
+        particles = [];
+        for (let i = 0; i < n; i++) particles.push(new Particle());
+      }
+
+      function drawConnections() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.save();
+              ctx.globalAlpha = (1 - dist / 120) * 0.12;
+              ctx.strokeStyle = '#00e5ff';
+              ctx.lineWidth = 0.5;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+              ctx.restore();
+            }
+          }
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawConnections();
+        particles.forEach(p => { p.update(); p.draw(); });
+        animFrame = requestAnimationFrame(animate);
+      }
+
+      resize();
+      initParticles(90);
+      animate();
+      window.addEventListener('resize', () => { resize(); initParticles(90); });
+    })();
+
+    /* ── TYPEWRITER ── */
+    (function () {
+      const roles = ['Basic Web Designer', 'Digital Video Editor', 'Digital Photo Editor', 'Content Creator', 'Digital Poster Designing', 'IT Student'];
+      const el = document.querySelector('.typed-text');
+      let ri = 0, ci = 0, deleting = false, wait = 0;
+
+      function tick() {
+        const current = roles[ri];
+        if (!deleting) {
+          el.textContent = current.slice(0, ci + 1);
+          ci++;
+          if (ci === current.length) { deleting = true; wait = 28; }
+        } else {
+          if (wait > 0) { wait--; setTimeout(tick, 60); return; }
+          el.textContent = current.slice(0, ci - 1);
+          ci--;
+          if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+        }
+        setTimeout(tick, deleting ? 40 : 90);
+      }
+      setTimeout(tick, 800);
+    })();
+
+    /* ── NAVBAR SCROLL ── */
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── MOBILE NAV TOGGLE ── */
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('open');
+      this.classList.toggle('active');
+    });
+
+    /* ── INTERSECTION OBSERVER: reveals, skill bars, circles ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+
+        if (el.classList.contains('reveal') || el.classList.contains('timeline-item') || el.classList.contains('service-card') ||
+          el.classList.contains('testimonial-card') || el.classList.contains('portfolio-item')) {
+          el.classList.add('visible');
+        }
+
+        /* Skill bars */
+        if (el.classList.contains('skill-bar-list')) {
+          el.querySelectorAll('.skill-fill').forEach(fill => {
+            fill.style.width = fill.style.getPropertyValue('--target');
+          });
+        }
+
+        /* Circular rings */
+        if (el.classList.contains('circles-grid')) {
+          el.querySelectorAll('.circle-ring').forEach(ring => {
+            const val = parseFloat(ring.dataset.val);
+            const circumference = 314;
+            const offset = circumference - (val / 100) * circumference;
+            ring.style.strokeDashoffset = offset;
+          });
+        }
+
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.reveal, .timeline-item, .service-card, .testimonial-card, .portfolio-item, .skill-bar-list, .circles-grid').forEach(el => observer.observe(el));
+
+    /* ── CONTACT FORM ── */
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      const toastText = toast.querySelector('span');
+
+      const data = {
+        name: document.getElementById('contactName').value,
+        email: document.getElementById('contactEmail').value,
+        phone: document.getElementById('contactPhone').value,
+        message: document.getElementById('contactMessage').value
+      };
+
+      try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          toastText.textContent = 'Information securely saved in SQL & Excel Database!';
+          toast.classList.add('show');
+          e.target.reset();
+        } else {
+          toastText.textContent = 'Failed to save! Is the server running?';
+          toast.classList.add('show');
+        }
+      } catch (err) {
+        console.error(err);
+        toastText.textContent = 'Error connecting to database server!';
+        toast.classList.add('show');
+      }
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toastText.textContent = 'Information securely saved in database!', 400);
+      }, 4000);
+    }
+
+    /* ── SMOOTH ACTIVE NAV ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 200) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+
+</html>
